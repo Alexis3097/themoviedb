@@ -2,12 +2,15 @@
   <AppBar />
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-9 col-lg-9 col-xs-9 bg-color-back " >
+      <div class="col-md-9 col-lg-9 col-xs-9 main-page">
         <main class="all-height">
           <router-view />
         </main>
       </div>
-      <div class="col-md-3 col-lg-3 col-xs-3 sidebar-height bg-color-back">
+      <div class="col-md-3 col-lg-3 col-xs-3 sidebar-height">
+        <p class="text-white" style="font-weight: bolder; text-align: left">
+          Popular movies
+        </p>
         <Sidebar />
       </div>
     </div>
@@ -22,22 +25,30 @@
   text-align: center;
   color: #2c3e50;
 }
-
+.main-page {
+  left: 0;
+  background-color: black;
+}
 .sidebar-height {
+  height: 100%;
+  position: fixed;
   height: 100vh;
+  right: 0;
 }
 </style>
 <script>
 import AppBar from "./components/AppBar.vue";
 import Sidebar from "./components/Sidebar.vue";
+import HomeView from "./views/HomeView.vue";
 export default {
   components: {
     AppBar,
     Sidebar,
+    HomeView,
   },
   data() {
     return {
-      movies:[],
+      movies: [],
     };
   },
   methods: {
@@ -57,10 +68,18 @@ export default {
 };
 </script>
 <style scoped>
-.sidebar-height{
-  overflow-y: scroll
+.sidebar-height {
+  overflow-y: scroll;
+  background-color: black;
+  top: 0;
+  z-index: 1;
+  padding-top: 5%;
 }
-.bg-color-back{
+.sidebar-height::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(225, 32, 32);
+  border-radius: 10px;
+}
+.bg-color-back {
   background-color: black;
 }
 </style>

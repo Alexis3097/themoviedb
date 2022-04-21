@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-color-back">
+  <nav style="z-index: 10;" class="navbar navbar-expand-lg navbar-dark bg-color-back">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .bg-color-back{
   background-color: black;
 }

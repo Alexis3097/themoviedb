@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card card-bottom bg-color-back text-white"
+    class="card card-bottom  text-white"
     v-for="(movie, i) in movies"
     :key="i.id"
   >
@@ -64,6 +64,7 @@ export default {
 };
 </script>
 <style scoped>
+
 .card-bottom .myCard-poster {
   height: 15rem;
   background-size: cover !important;
@@ -92,6 +93,11 @@ export default {
 .card-info .info-bottom .calidad {
   width: 50%;
   text-align: left;
+      background-color: yellow;
+    color: #030303;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
 }
 .card-info .info-bottom .rate {
   width: 50%;
@@ -100,6 +106,7 @@ export default {
 .card-bottom {
   margin-bottom: 1rem;
   border: none;
+  background-color: transparent;
 }
 .bg-color-back{
   background-color: black;
